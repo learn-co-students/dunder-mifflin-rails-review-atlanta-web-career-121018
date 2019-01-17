@@ -1,0 +1,22 @@
+<h1><%= @employee.full_name %></h1>
+
+<% if @employee.alias != "none" %>
+  <div><%= @employee.alias %></div>
+<% end %>
+<br>
+
+<%= image_tag @employee.img_url %>
+
+<p>
+  <h4>Title</h4>
+  <div><%= @employee.title %></div>
+</p>
+<br>
+
+<p>
+  <h4>Office</h4>
+  <div><%= @employee.office %></div>
+</p>
+<br>
+
+<p><%= link_to "Edit", edit_employee_path(@employee) %></p>
